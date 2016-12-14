@@ -1,0 +1,17 @@
+package business.entity.medicine;
+
+public class Medicine {
+	
+	private java.lang.String id;
+	
+	private java.lang.String name;
+	
+	private float price;
+	
+	private java.lang.Integer methods;
+	
+	private java.lang.Integer isEnabled;
+	
+	private java.lang.String updateTime;
+
+}

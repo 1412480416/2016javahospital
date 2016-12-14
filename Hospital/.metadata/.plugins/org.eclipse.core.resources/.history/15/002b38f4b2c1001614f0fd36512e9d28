@@ -1,0 +1,21 @@
+package business.service.medicine;
+
+public class MedicineService {
+	
+	
+	/**
+	 * 增加
+	 */
+	
+	/**
+	 * 删除
+	 */
+	
+	/**
+	 * 更新
+	 */
+	
+	/**
+	 * 查找
+	 */
+}

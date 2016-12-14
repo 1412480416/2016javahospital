@@ -1,0 +1,10 @@
+package business.action.medicine;
+
+import business.service.medicine.MedicineService;
+
+public class MedicineAction {
+	public void testForData() {
+		MedicineService medicineService = new MedicineService();
+		medicineService.ListAll();
+	}
+}

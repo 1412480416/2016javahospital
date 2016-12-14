@@ -1,0 +1,32 @@
+package business.action.medicine;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import business.service.medicine.MedicineService;
+import test.MySQLHelper;
+
+public class MedicineAction {
+	public void testForData() {
+		MedicineService medicineService = new MedicineService();
+		medicineService.ListAll();
+	}
+	
+//    public void testForData() {  
+//        String sql = "SELECT * FROM t_medicine";  
+//        try {  
+//            ResultSet rs = MySQLHelper.executeQuery(sql, null);  
+//            while (rs.next()) {  
+//                System.out.println("id:" + rs.getString("id")  
+//                        + "\t name:" + rs.getString("name")  
+//                        + "\t price:" + rs.getString("price") + "\t methods:"  
+//                        + rs.getDouble("methods"));  
+//            }  
+//        } catch (SQLException e) {  
+//            e.printStackTrace();  
+//        } finally {  
+//        	MySQLHelper.close(MySQLHelper.getRs(), MySQLHelper.getPs(), MySQLHelper  
+//                    .getConn());  
+//        }  
+//    }  
+}

@@ -1,0 +1,25 @@
+package business.entity.medicine;
+
+public class Medicine {
+	/**ID*/
+	private String id;
+	/**药品名称*/
+	private String name;
+	/**药品单价*/
+	private float price;
+	/**计费方式：1.片；2.ml*/
+	private Integer methods;
+	/**药品是否有效：0.无效；1.有效*/
+	private Integer isEnabled;
+	/**药品信息上次更新时间*/
+	private String updateTime;
+	/**药品规格：片/盒；ml/盒*/
+	private Integer norms;
+	/**库存量*/
+	private Integer num;
+	/**散装库存量*/
+	private float specNum;
+	/**备注*/
+	private jString comm;
+
+}

@@ -1,0 +1,44 @@
+package business.service.medicine;
+
+import business.entity.medicine.MedicineEntity;
+import test.MySQLHelper;
+
+public class MedicineService {
+	
+	/**
+	 * 增加
+	 */
+//    public int AddFeeDao(entity.FeeEntity feeEntity)
+//    {
+//        String commandText = "insert into t_cc_fee(feeId, userNumber, feeBalance, feeStatus, feeSendWarn, feeStartTime, feeLastUserTime, feeComm) select @feeId, @userNumber, @feeBalance, @feeStatus, @feeSendWarn, @feeStartTime, @feeLastUserTIme, @feeComm from DUAL where not exists(select * from t_cc_fee where feeId = @feeId)";
+//        MySqlParameter[] paras = new MySqlParameter[]
+//        {
+//            new MySqlParameter ("@feeID", feeEntity.FeeId),
+//            new MySqlParameter ("@userNumber", feeEntity.UserEntity.UserNumber),
+//            new MySqlParameter ("@feeBalance", feeEntity.FeeBalance),
+//            new MySqlParameter ("@feeStatus", feeEntity.FeeStatus),
+//            new MySqlParameter ("@feeSendWarn", feeEntity.FeeSendWarn),
+//            new MySqlParameter ("@feeStartTime", feeEntity.FeeStartTime),
+//            new MySqlParameter ("@feeLastUserTime", feeEntity.FeeLastUserTime),
+//            new MySqlParameter ("@feeComm", feeEntity.FeeComm)
+//        };
+//        return com.MySqlDBHelp.GetExecute(commandText, paras);
+//    }
+	public void AddMedicineDao(MedicineEntity medicineEntity) {
+		String sql = "INSERT INTO t_medicine (id, name, price, methods, isEnabled, updateTime, norms, num, specNum, comm) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		String[] parameters = {medicineEntity.getId(), medicineEntity.getName(), Float.toString(medicineEntity.getPrice()), Integer.toString(medicineEntity.getMethods()), Integer.toString(medicineEntity.getIsEnabled()), medicineEntity.getUpdateTime(), Integer.toString(medicineEntity.getNorms()), Integer.toString(medicineEntity.getNum()), Float.toString(medicineEntity.getSpecNum()), medicineEntity.getComm()};
+		MySQLHelper.executeUpdate(sql, parameters);
+	}
+	
+	/**
+	 * 删除
+	 */
+	
+	/**
+	 * 更新
+	 */
+	
+	/**
+	 * 查找
+	 */
+}

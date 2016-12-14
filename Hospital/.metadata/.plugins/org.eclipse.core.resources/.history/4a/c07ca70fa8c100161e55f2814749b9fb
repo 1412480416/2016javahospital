@@ -1,0 +1,27 @@
+package test;
+
+import java.sql.DriverManager;
+
+import com.mysql.jdbc.Connection;
+
+public class JdbcTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Connection conn = null;
+		String sql;
+		String url = "jdbc:mysql://localhost:3306/db_hospital?" + "user=root&password=root&userUnicode=true&characterEncoding=UTF8";
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("成功加载MySQL驱动");
+			conn = DriverManager.getConnection(url);
+			Statment stmt = conn.createStatement();
+			sql = "select * from t_medicine";
+			ResultSet rs = stmt.executeQuery(sql);
+			System.out.println("ID\t药品名称\t药品单价\t计费方式\t是否有效\t上次更新时间\t药品规格\t库存量\t散装库存量\t备注");
+		}
+	}
+
+}
